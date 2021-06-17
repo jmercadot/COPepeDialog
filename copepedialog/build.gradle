@@ -1,6 +1,5 @@
-plugins {
-    id 'com.android.library'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 30
@@ -24,6 +23,16 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    task installArchives(type: Upload) {
+        description "Installs the artifacts to the local Maven repository."
+        repositories.mavenInstaller {
+            configuration = configurations.default
+            pom.groupId = 'jmercadot'
+            pom.artifactId = 'COPepeDialog'
+            pom.version = '1.0.0'
+        }
     }
 }
 
