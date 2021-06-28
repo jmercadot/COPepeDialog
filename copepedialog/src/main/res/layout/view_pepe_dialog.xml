@@ -113,7 +113,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStart"
-            style="@style/style_boton_generico"
+            style="@style/style_pepe_button_positive"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -129,13 +129,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStart2"
-            style="@style/style_boton_generico"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:gravity="center"
+            android:textColor="?attr/colorPrimary"
             android:text="Button"
             app:layout_constraintBottom_toTopOf="@+id/btnStart"
             app:layout_constraintEnd_toStartOf="@+id/guideline91"
