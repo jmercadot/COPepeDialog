@@ -11,10 +11,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new COPepeDialog.Builder(this,getClass().getSimpleName())
-                .setTitle("hola mundo")
-                .setBodyText("hola tu")
-                .create()
-                .show();
+        COPepeDialog.Builder builder = new COPepeDialog.Builder(this, getClass().getSimpleName());
+        builder.setTitle("hola mundo");
+        builder.setBodyText("hola tu");
+        COPepeDialog dialog = builder.create();
+        if (dialog.isShowing()) {
+            dialog.dismiss();
+        }
+        dialog.show();
     }
 }

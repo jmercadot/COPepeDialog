@@ -46,6 +46,10 @@ public class COPepeDialog implements COPepeDialogInterface {
         utils.clearAll();
     }
 
+    public boolean isShowing(){
+        return dialog.isShowing();
+    }
+
     public void show() {
         if (!utils.getNoMostrarDeNuevo(simpleName)) {
             dialog.show();
